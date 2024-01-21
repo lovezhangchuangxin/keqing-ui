@@ -1,0 +1,55 @@
+{
+  "name": "kq-ui",
+  "private": true,
+  "packageManager": "pnpm@8.14.1",
+  "workspaces": [
+    "packages/*",
+    "play",
+    "docs",
+    "internal/*"
+  ],
+  "scripts": {
+    "cz": "git add . && git-cz",
+    "prepare": "husky install",
+    "format": "prettier --write . --cache",
+    "lint": "eslint --fix . --cache",
+    "lint:staged": "lint-staged"
+  },
+  "dependencies": {
+    "@kq-ui/components": "workspace:^",
+    "@kq-ui/theme-chalk": "workspace:^",
+    "@kq-ui/utils": "workspace:^"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@kq-ui/eslint-config": "workspace:^",
+    "@vue/shared": "^3.4.15",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "less": "^4.2.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.11"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
+  }
+}

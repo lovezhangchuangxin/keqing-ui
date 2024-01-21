@@ -1,0 +1,8 @@
+{
+  "name": "@kq-ui/utils",
+  "version": "1.0.0",
+  "description": "kq-ui utils",
+  "main": "index.ts",
+  "author": "lovezhangchuangxin",
+  "license": "ISC"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@kq-ui/components",
+  "version": "1.0.0",
+  "description": "all kq-ui components",
+  "main": "index.ts",
+  "peerDependencies": {
+    "vue": "^3.3.11"
+  },
+  "author": "lovezhangchuangxin",
+  "license": "ISC"
+}

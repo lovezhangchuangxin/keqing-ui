@@ -1,0 +1,6 @@
+# 虽然可以使用 --ignore-path 参数来指定忽略 .gitignore中的文件，但是这样 .prettierignore 就不会生效
+
+dist
+node_modules
+coverage
+pnpm-lock.yaml
