@@ -11,19 +11,19 @@ importers:
       '@ctrl/tinycolor':
         specifier: ^4.0.3
         version: 4.0.3
-      '@kq-ui/components':
+      '@keqing-ui/components':
         specifier: workspace:^
         version: link:packages/components
-      '@kq-ui/hooks':
+      '@keqing-ui/hooks':
         specifier: workspace:^
         version: link:packages/hooks
-      '@kq-ui/icons':
+      '@keqing-ui/icons':
         specifier: workspace:^
         version: link:packages/icons
-      '@kq-ui/theme-chalk':
+      '@keqing-ui/theme-chalk':
         specifier: workspace:^
         version: link:packages/theme-chalk
-      '@kq-ui/utils':
+      '@keqing-ui/utils':
         specifier: workspace:^
         version: link:packages/utils
     devDependencies:
@@ -33,7 +33,7 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^18.4.4
         version: 18.4.4
-      '@kq-ui/eslint-config':
+      '@keqing-ui/eslint-config':
         specifier: workspace:^
         version: link:internal/eslint-config
       '@types/node':
@@ -175,10 +175,10 @@ importers:
 
   play:
     dependencies:
-      '@kq-ui/components':
+      '@keqing-ui/components':
         specifier: workspace:^
         version: link:../packages/components
-      '@kq-ui/icons':
+      '@keqing-ui/icons':
         specifier: workspace:^
         version: link:../packages/icons
       vue:

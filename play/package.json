@@ -1,5 +1,5 @@
 {
-  "name": "@kq-ui/play",
+  "name": "@keqing-ui/play",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kq-ui/components": "workspace:^",
-    "@kq-ui/icons": "workspace:^",
+    "@keqing-ui/components": "workspace:^",
+    "@keqing-ui/icons": "workspace:^",
     "vue": "^3.3.11"
   },
   "devDependencies": {

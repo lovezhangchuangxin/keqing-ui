@@ -33,9 +33,9 @@
 
 <script setup lang="ts">
 import { computed, ref, useSlots } from 'vue'
-import { KqIcon } from '@kq-ui/components/icon'
-import { useNamespace } from '@kq-ui/hooks'
-import { SuccessFilled, WarningFilled, CircleCloseFilled, InfoFilled, Close } from '@kq-ui/icons'
+import { KqIcon } from '@keqing-ui/components/icon'
+import { useNamespace } from '@keqing-ui/hooks'
+import { SuccessFilled, WarningFilled, CircleCloseFilled, InfoFilled, Close } from '@keqing-ui/icons'
 import { AlertProps, AlertEmits } from './alert'
 import '../style'
 

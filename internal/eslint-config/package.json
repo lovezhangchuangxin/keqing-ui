@@ -1,5 +1,5 @@
 {
-  "name": "@kq-ui/eslint-config",
+  "name": "@keqing-ui/eslint-config",
   "version": "1.0.0",
   "description": "ESLint Config",
   "main": "index.js",

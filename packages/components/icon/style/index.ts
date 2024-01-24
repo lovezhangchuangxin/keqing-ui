@@ -1,1 +1,1 @@
-import '@kq-ui/theme-chalk/src/icon.scss'
+import '@keqing-ui/theme-chalk/src/icon.scss'

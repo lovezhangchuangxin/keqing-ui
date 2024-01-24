@@ -1,4 +1,4 @@
-import { Loading } from '@kq-ui/icons'
+import { Loading } from '@keqing-ui/icons'
 import { ButtonHTMLAttributes } from 'vue'
 
 export const buttonTypes = ['default', 'primary', 'success', 'info', 'danger', 'warning'] as const

@@ -1,4 +1,4 @@
-import { withInstall } from '@kq-ui/utils'
+import { withInstall } from '@keqing-ui/utils'
 import Icon from './src/icon.vue'
 
 export const KqIcon = withInstall(Icon)

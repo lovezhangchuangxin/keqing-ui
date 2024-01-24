@@ -24,8 +24,8 @@
 </template>
 
 <script setup lang="ts">
-import KqIcon from '@kq-ui/components/icon'
-import { Loading } from '@kq-ui/icons'
+import KqIcon from '@keqing-ui/components/icon'
+import { Loading } from '@keqing-ui/icons'
 </script>
 
 <style scoped>

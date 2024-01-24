@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@kq-ui/eslint-config"]
+  "extends": ["@keqing-ui/eslint-config"]
 }

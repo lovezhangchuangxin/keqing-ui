@@ -1,5 +1,5 @@
 {
-  "name": "kq-ui",
+  "name": "keqing-ui",
   "private": true,
   "packageManager": "pnpm@8.14.1",
   "workspaces": [
@@ -18,16 +18,16 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.0.3",
-    "@kq-ui/components": "workspace:^",
-    "@kq-ui/hooks": "workspace:^",
-    "@kq-ui/icons": "workspace:^",
-    "@kq-ui/theme-chalk": "workspace:^",
-    "@kq-ui/utils": "workspace:^"
+    "@keqing-ui/components": "workspace:^",
+    "@keqing-ui/hooks": "workspace:^",
+    "@keqing-ui/icons": "workspace:^",
+    "@keqing-ui/theme-chalk": "workspace:^",
+    "@keqing-ui/utils": "workspace:^"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
-    "@kq-ui/eslint-config": "workspace:^",
+    "@keqing-ui/eslint-config": "workspace:^",
     "@types/node": "^20.11.5",
     "@vue/shared": "^3.4.15",
     "commitizen": "^4.3.0",

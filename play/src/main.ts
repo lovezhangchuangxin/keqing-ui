@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import KqUI from '@kq-ui/components'
-import KqIcons from '@kq-ui/icons'
+import KqUI from '@keqing-ui/components'
+import KqIcons from '@keqing-ui/icons'
 
 const app = createApp(App)
 

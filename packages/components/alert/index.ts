@@ -1,4 +1,4 @@
-import { withInstall } from '@kq-ui/utils'
+import { withInstall } from '@keqing-ui/utils'
 import Alert from './src/alert.vue'
 
 export const KqAlert = withInstall(Alert)

@@ -1,7 +1,7 @@
 {
-  "name": "@kq-ui/components",
+  "name": "@keqing-ui/components",
   "version": "1.0.0",
-  "description": "all kq-ui components",
+  "description": "all keqing-ui components",
   "main": "index.ts",
   "peerDependencies": {
     "vue": "^3.3.11"

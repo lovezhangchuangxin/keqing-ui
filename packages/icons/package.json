@@ -1,7 +1,7 @@
 {
-  "name": "@kq-ui/icons",
+  "name": "@keqing-ui/icons",
   "version": "1.0.0",
-  "description": "kq-ui icons",
+  "description": "keqing-ui icons",
   "type": "module",
   "main": "./dist/icons.cjs",
   "module": "./dist/icons.js",
@@ -18,7 +18,7 @@
   "keywords": [
     "icon",
     "svg",
-    "kq-ui"
+    "keqing-ui"
   ],
   "peerDependencies": {
     "vue": "^3.3.11"

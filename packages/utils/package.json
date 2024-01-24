@@ -1,7 +1,7 @@
 {
-  "name": "@kq-ui/utils",
+  "name": "@keqing-ui/utils",
   "version": "1.0.0",
-  "description": "kq-ui utils",
+  "description": "keqing-ui utils",
   "main": "index.ts",
   "author": "lovezhangchuangxin",
   "license": "ISC"

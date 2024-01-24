@@ -33,9 +33,9 @@
 </template>
 
 <script setup lang="ts">
-import { useNamespace } from '@kq-ui/hooks'
-import { Loading } from '@kq-ui/icons'
-import { KqIcon } from '@kq-ui/components/icon'
+import { useNamespace } from '@keqing-ui/hooks'
+import { Loading } from '@keqing-ui/icons'
+import { KqIcon } from '@keqing-ui/components/icon'
 import '../style'
 import { ButtonProps, ButtonEmits } from './button'
 import { useButtonCustomStyle } from './button-custom'

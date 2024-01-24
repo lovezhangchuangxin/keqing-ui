@@ -1,4 +1,4 @@
-import { withInstall, withNoopInstall } from '@kq-ui/utils'
+import { withInstall, withNoopInstall } from '@keqing-ui/utils'
 import Button from './src/button.vue'
 import ButtonGroup from './src/button-group.vue'
 

@@ -6,8 +6,8 @@
 
 <script setup lang="ts">
 import { CSSProperties, computed } from 'vue'
-import { useNamespace } from '@kq-ui/hooks'
-import { isUndefined, addUnit } from '@kq-ui/utils'
+import { useNamespace } from '@keqing-ui/hooks'
+import { isUndefined, addUnit } from '@keqing-ui/utils'
 import { iconProps } from './icon'
 import '../style'
 

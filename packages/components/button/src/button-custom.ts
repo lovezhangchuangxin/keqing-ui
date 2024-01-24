@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { TinyColor } from '@ctrl/tinycolor'
-import { useNamespace } from '@kq-ui/hooks'
+import { useNamespace } from '@keqing-ui/hooks'
 import { ButtonProps } from './button'
 
 export const darken = (color: TinyColor, amount = 20) => {

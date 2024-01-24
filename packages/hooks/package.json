@@ -1,7 +1,7 @@
 {
-  "name": "@kq-ui/hooks",
+  "name": "@keqing-ui/hooks",
   "version": "1.0.0",
-  "description": "kq-ui hooks",
+  "description": "keqing-ui hooks",
   "main": "index.ts",
   "module": "index.ts",
   "types": "index.d.ts",
