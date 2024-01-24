@@ -14,7 +14,8 @@
     "format": "prettier --write . --cache",
     "lint": "eslint --fix . --cache",
     "lint:staged": "lint-staged",
-    "play": "pnpm -C play dev"
+    "play": "pnpm -C play dev",
+    "build:components": "pnpm -C packages/components build"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.0.3",
@@ -22,13 +23,15 @@
     "@keqing-ui/hooks": "workspace:^",
     "@keqing-ui/icons": "workspace:^",
     "@keqing-ui/theme-chalk": "workspace:^",
-    "@keqing-ui/utils": "workspace:^"
+    "@keqing-ui/utils": "workspace:^",
+    "keqing-ui": "workspace:^"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@keqing-ui/eslint-config": "workspace:^",
     "@types/node": "^20.11.5",
+    "@vitejs/plugin-vue": "^4.5.2",
     "@vue/shared": "^3.4.15",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
@@ -39,6 +42,8 @@
     "sass": "^1.70.0",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.1",
     "vitest": "^1.2.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"

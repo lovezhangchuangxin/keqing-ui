@@ -1,3 +1,3 @@
 export { KqAlert } from './alert'
-export { KqButton } from './button'
+export { KqButton, KqButtonGroup } from './button'
 export { KqIcon } from './icon'

@@ -1,5 +1,4 @@
 import { App } from 'vue'
-import { version } from './package.json'
 import * as components from './components'
 
 const install = (app: App) => {
@@ -9,4 +8,4 @@ const install = (app: App) => {
 }
 
 export default install
-export { version }
+export * from './components'

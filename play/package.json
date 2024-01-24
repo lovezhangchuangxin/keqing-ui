@@ -11,6 +11,7 @@
   "dependencies": {
     "@keqing-ui/components": "workspace:^",
     "@keqing-ui/icons": "workspace:^",
+    "keqing-ui": "workspace:^",
     "vue": "^3.3.11"
   },
   "devDependencies": {

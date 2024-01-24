@@ -26,6 +26,9 @@ importers:
       '@keqing-ui/utils':
         specifier: workspace:^
         version: link:packages/utils
+      keqing-ui:
+        specifier: workspace:^
+        version: link:packages/keqing-ui
     devDependencies:
       '@commitlint/cli':
         specifier: ^18.4.4
@@ -39,6 +42,9 @@ importers:
       '@types/node':
         specifier: ^20.11.5
         version: 20.11.5
+      '@vitejs/plugin-vue':
+        specifier: ^4.5.2
+        version: 4.6.2(vite@5.0.12)(vue@3.4.15)
       '@vue/shared':
         specifier: ^3.4.15
         version: 3.4.15
@@ -69,6 +75,12 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+      vite:
+        specifier: ^5.0.8
+        version: 5.0.12(@types/node@20.11.5)(sass@1.70.0)
+      vite-plugin-dts:
+        specifier: ^3.7.1
+        version: 3.7.1(@types/node@20.11.5)(typescript@5.3.3)(vite@5.0.12)
       vitest:
         specifier: ^1.2.1
         version: 1.2.1(@types/node@20.11.5)(sass@1.70.0)
@@ -169,6 +181,12 @@ importers:
         specifier: ^3.3.11
         version: 3.4.15(typescript@5.3.3)
 
+  packages/keqing-ui:
+    dependencies:
+      vue:
+        specifier: ^3.3.11
+        version: 3.4.15(typescript@5.3.3)
+
   packages/theme-chalk: {}
 
   packages/utils: {}
@@ -181,6 +199,9 @@ importers:
       '@keqing-ui/icons':
         specifier: workspace:^
         version: link:../packages/icons
+      keqing-ui:
+        specifier: workspace:^
+        version: link:../packages/keqing-ui
       vue:
         specifier: ^3.3.11
         version: 3.4.15(typescript@5.3.3)

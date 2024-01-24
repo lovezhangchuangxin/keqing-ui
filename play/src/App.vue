@@ -1,10 +1,6 @@
 <template>
   <div>
     Hello World
-    <kq-icon size="20" class="is-loading">
-      <Loading />
-    </kq-icon>
-
     <kq-button @click="(e: any) => console.log(e)">点击</kq-button>
     <kq-button type="primary" loading round @click="(e: any) => console.log(e)">点击</kq-button>
 
@@ -23,10 +19,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import KqIcon from '@keqing-ui/components/icon'
-import { Loading } from '@keqing-ui/icons'
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 :root {

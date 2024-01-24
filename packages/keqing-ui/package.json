@@ -1,0 +1,80 @@
+{
+  "name": "keqing-ui",
+  "version": "1.0.0",
+  "description": "A Component Library for Vue 3",
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "types": "es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.mjs",
+      "require": "./lib/index.js"
+    },
+    "./es": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.mjs"
+    },
+    "./lib": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.js"
+    },
+    "./es/*.mjs": {
+      "types": "./es/*.d.ts",
+      "import": "./es/*.mjs"
+    },
+    "./es/*.css": {
+      "import": "./es/*.css"
+    },
+    "./es/*": {
+      "types": [
+        "./es/*.d.ts",
+        "./es/*/index.d.ts"
+      ],
+      "import": "./es/*.mjs"
+    },
+    "./lib/*.js": {
+      "types": "./lib/*.d.ts",
+      "require": "./lib/*.js"
+    },
+    "./lib/*.css": {
+      "import": "./lib/*.css"
+    },
+    "./lib/*": {
+      "types": [
+        "./lib/*.d.ts",
+        "./lib/*/index.d.ts"
+      ],
+      "require": "./lib/*.js"
+    },
+    "./*": "./*"
+  },
+  "style": "es/style.css",
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "lib",
+    "es",
+    "tsconfig.json",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "icon",
+    "svg",
+    "keqing-ui"
+  ],
+  "author": {
+    "name": "lovezhangchuangxin",
+    "email": "2911331070@qq.com"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.3.11"
+  }
+}

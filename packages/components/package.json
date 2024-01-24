@@ -2,9 +2,10 @@
   "name": "@keqing-ui/components",
   "version": "1.0.0",
   "description": "all keqing-ui components",
+  "type": "module",
   "main": "index.ts",
+  "license": "ISC",
   "peerDependencies": {
     "vue": "^3.3.11"
-  },
-  "license": "ISC"
+  }
 }

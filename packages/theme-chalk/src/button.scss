@@ -358,7 +358,7 @@ $button-icon-span-gap: map.merge(
 
   @each $size in (large, small) {
     @include m($size) {
-      @include set-css-var(('button', 'size'), map.get($common-component-size, $size));
+      @include set-css-var('button-size', map.get($common-component-size, $size));
 
       height: getCssVar('button', 'size');
 
