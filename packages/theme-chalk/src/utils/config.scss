@@ -1,0 +1,10 @@
+// 命名空间
+$namespace: 'kq' !default;
+// 一般分隔符
+$common-separator: '-' !default;
+// 元素分割符
+$element-separator: '__' !default;
+// 修饰符分隔符
+$modifier-separator: '--' !default;
+// 状态前缀，比如：is-active, is-disabled
+$state-prefix: 'is-' !default;

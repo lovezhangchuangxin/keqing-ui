@@ -13,10 +13,14 @@
     "prepare": "husky install",
     "format": "prettier --write . --cache",
     "lint": "eslint --fix . --cache",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "play": "pnpm -C play dev"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^4.0.3",
     "@kq-ui/components": "workspace:^",
+    "@kq-ui/hooks": "workspace:^",
+    "@kq-ui/icons": "workspace:^",
     "@kq-ui/theme-chalk": "workspace:^",
     "@kq-ui/utils": "workspace:^"
   },
@@ -24,14 +28,15 @@
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@kq-ui/eslint-config": "workspace:^",
+    "@types/node": "^20.11.5",
     "@vue/shared": "^3.4.15",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
-    "less": "^4.2.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.4",
+    "sass": "^1.70.0",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vitest": "^1.2.1",

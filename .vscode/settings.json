@@ -2,5 +2,7 @@
   "editor.formatOnSave": true,
   "npm.packageManager": "pnpm",
   "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue"],
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue"]
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue"],
+
+  "editor.tabSize": 2
 }

@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kq-ui/components": "workspace:^",
+    "@kq-ui/icons": "workspace:^",
     "vue": "^3.3.11"
   },
   "devDependencies": {

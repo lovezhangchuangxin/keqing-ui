@@ -1,0 +1,33 @@
+@use '../utils/bem' as *;
+
+// Input:
+@include b('button') {
+  color: red;
+
+  @include e('icon') {
+    color: blue;
+
+    @include m('primary') {
+      color: green;
+    }
+  }
+
+  @include m('primary') {
+    color: green;
+  }
+}
+
+// Output:
+// .kq-button {
+//   color: red;
+// }
+// .kq-button__icon {
+//   color: blue;
+// }
+// .kq-button--primary {
+//   color: green;
+// }
+
+// .kq-button--primary {
+//   color: green;
+// }

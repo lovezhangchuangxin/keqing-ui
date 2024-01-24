@@ -1,0 +1,260 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:color';
+@use './mixins' as *;
+@forward './mixins';
+
+// 通用类型，比如按钮类型
+$types: primary, success, warning, danger, error, info;
+
+// 颜色
+$colors: () !default;
+$colors: map.merge(
+  (
+    'white': #ffffff,
+    'black': #000000,
+    'primary': #6c5b88,
+    'success': #67c23a,
+    'warning': #e6a23c,
+    'danger': #f56c6c,
+    'error': #f56c6c,
+    'info': #909399,
+  ),
+  $colors
+);
+
+$color-white: map.get($colors, 'white') !default;
+$color-black: map.get($colors, 'black') !default;
+$color-primary: map.get($colors, 'primary') !default;
+$color-success: map.get($colors, 'success') !default;
+$color-warning: map.get($colors, 'warning') !default;
+$color-danger: map.get($colors, 'danger') !default;
+$color-error: map.get($colors, 'error') !default;
+$color-info: map.get($colors, 'info') !default;
+
+// 混合颜色到 $colors
+@mixin set-mix-color($type, $weight, $mode: 'light', $mix-color: $color-white) {
+  // 需要加 !global，表示修改的是全局变量 $colors，而不是局部变量
+  $colors: map.merge(
+    (
+      '#{$type}-#{$mode}-#{$weight}': mix($mix-color, map.get($colors, $type), math.percentage(math.div($weight, 10))),
+    ),
+    $colors
+  ) !global;
+}
+
+@each $type in $types {
+  @each $i in (1, 3, 5, 7, 9) {
+    @include set-mix-color($type, $i, 'light', $color-white);
+  }
+  @each $i in (1, 2, 3, 5, 7, 9) {
+    @include set-mix-color($type, $i, 'dark', $color-black);
+  }
+}
+
+// 文本颜色
+$text-color: () !default;
+$text-color: map.merge(
+  (
+    'primary': #303133,
+    'regular': #606266,
+    'secondary': #909399,
+    'placeholder': #a8abb2,
+    'disabled': #c0c4cc,
+  ),
+  $text-color
+);
+
+// 边框颜色
+$border-color: () !default;
+$border-color: map.merge(
+  (
+    '': #dcdfe6,
+    'light': #e4e7ed,
+    'lighter': #ebeef5,
+    'extra-light': #f2f6fc,
+    'dark': #d4d7de,
+    'darker': #cdd0d6,
+  ),
+  $border-color
+);
+
+// 填充颜色
+$fill-color: () !default;
+$fill-color: map.merge(
+  (
+    '': #f0f2f5,
+    'light': #f5f7fa,
+    'lighter': #fafafa,
+    'extra-light': #fafcff,
+    'dark': #ebedf0,
+    'darker': #e6e8eb,
+    'blank': #ffffff,
+  ),
+  $fill-color
+);
+
+// 背景颜色
+$bg-color: () !default;
+$bg-color: map.merge(
+  (
+    '': #ffffff,
+    'page': #f2f3f5,
+    'overlay': #ffffff,
+  ),
+  $bg-color
+);
+
+// 边框
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-color-hover: getCssVar('text-color', 'disabled') !default;
+
+$border-radius: () !default;
+$border-radius: map.merge(
+  (
+    'base': 4px,
+    'small': 2px,
+    'round': 20px,
+    'circle': 100%,
+  ),
+  $border-radius
+);
+
+// 盒子阴影
+$box-shadow: () !default;
+$box-shadow: map.merge(
+  (
+    '': (
+      0px 12px 32px 4px rgba(0, 0, 0, 0.04),
+      0px 8px 20px rgba(0, 0, 0, 0.08),
+    ),
+    'light': (
+      0px 0px 12px rgba(0, 0, 0, 0.12),
+    ),
+    'lighter': (
+      0px 0px 6px rgba(0, 0, 0, 0.12),
+    ),
+    'dark': (
+      0px 16px 48px 16px rgba(0, 0, 0, 0.08),
+      0px 12px 32px rgba(0, 0, 0, 0.12),
+      0px 8px 16px -8px rgba(0, 0, 0, 0.16),
+    ),
+  ),
+  $box-shadow
+);
+
+// 文字
+$font-family: () !default;
+$font-family: map.merge(
+  (
+    '':
+      "'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif",
+  ),
+  $font-family
+);
+
+$font-size: () !default;
+$font-size: map.merge(
+  (
+    'extra-large': 20px,
+    'large': 18px,
+    'medium': 16px,
+    'base': 14px,
+    'small': 13px,
+    'extra-small': 12px,
+  ),
+  $font-size
+);
+
+$font-weight: 500 !default;
+$font-line-height: 24px !default;
+
+// z-index
+$z-index: () !default;
+$z-index: map.merge(
+  (
+    'normal': 1,
+    'top': 1000,
+    'popper': 2000,
+  ),
+  $z-index
+);
+
+// Disable default
+$disabled: () !default;
+$disabled: map.merge(
+  (
+    'bg-color': getCssVar('fill-color', 'light'),
+    'text-color': getCssVar('text-color', 'placeholder'),
+    'border-color': getCssVar('border-color', 'light'),
+  ),
+  $disabled
+);
+
+$common-component-size: () !default;
+$common-component-size: map.merge(
+  (
+    'large': 40px,
+    'default': 32px,
+    'small': 24px,
+  ),
+  $common-component-size
+);
+
+// overlay
+$overlay-color: () !default;
+$overlay-color: map.merge(
+  (
+    '': rgba(0, 0, 0, 0.8),
+    'light': rgba(0, 0, 0, 0.7),
+    'lighter': rgba(0, 0, 0, 0.5),
+  ),
+  $overlay-color
+);
+
+// mask
+$mask-color: () !default;
+$mask-color: map.merge(
+  (
+    '': rgba(255, 255, 255, 0.9),
+    'extra-light': rgba(255, 255, 255, 0.3),
+  ),
+  $mask-color
+);
+
+// transition
+$transition: () !default;
+$transition: map.merge(
+  (
+    'all': all getCssVar('transition-duration') getCssVar('transition-function-ease-in-out-bezier'),
+    'fade': opacity getCssVar('transition-duration') getCssVar('transition-function-fast-bezier'),
+    'md-fade': (
+      transform getCssVar('transition-duration') getCssVar('transition-function-fast-bezier'),
+      opacity getCssVar('transition-duration') getCssVar('transition-function-fast-bezier'),
+    ),
+    'fade-linear': opacity getCssVar('transition-duration-fast') linear,
+    'border': border-color getCssVar('transition-duration-fast') getCssVar('transition-function-ease-in-out-bezier'),
+    'box-shadow': box-shadow getCssVar('transition-duration-fast') getCssVar('transition-function-ease-in-out-bezier'),
+    'color': color getCssVar('transition-duration-fast') getCssVar('transition-function-ease-in-out-bezier'),
+  ),
+  $transition
+);
+
+$transition-duration: () !default;
+$transition-duration: map.merge(
+  (
+    '': 0.3s,
+    'fast': 0.2s,
+  ),
+  $transition-duration
+);
+
+$transition-function: () !default;
+$transition-function: map.merge(
+  (
+    'ease-in-out-bezier': cubic-bezier(0.645, 0.045, 0.355, 1),
+    'fast-bezier': cubic-bezier(0.23, 1, 0.32, 1),
+  ),
+  $transition-function
+);

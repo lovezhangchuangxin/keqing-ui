@@ -1,0 +1,12 @@
+{
+  "name": "@kq-ui/hooks",
+  "version": "1.0.0",
+  "description": "kq-ui hooks",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.d.ts",
+  "peerDependencies": {
+    "vue": "^3.3.11"
+  },
+  "license": "ISC"
+}

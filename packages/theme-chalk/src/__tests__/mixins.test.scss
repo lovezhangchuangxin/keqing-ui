@@ -1,0 +1,10 @@
+@use '../utils/mixins.scss' as *;
+
+.kq-button {
+  width: 100px;
+  span {
+    @include when(loding) {
+      color: red;
+    }
+  }
+}

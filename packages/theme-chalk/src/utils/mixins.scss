@@ -1,0 +1,81 @@
+@use 'sass:map';
+@use './config' as *;
+@use './function' as *;
+@forward './config';
+@forward './bem';
+@forward './function';
+
+// .is-xx
+@mixin when($state) {
+  &.#{$state-prefix + $state} {
+    @content;
+  }
+}
+
+// 设置 css 变量值
+@mixin set-css-var($name, $value) {
+  #{joinVarName($name)}: #{$value};
+}
+
+// 根据 map 快速设置 css 变量值
+@mixin set-css-var-quick($map) {
+  @each $key, $value in $map {
+    @include set-css-var($key, $value);
+  }
+}
+
+// 根据 map 和  中设置 css 变量值
+@mixin set-var-from-map($name, $key, $map) {
+  #{joinVarName($name, $key)}: #{map.get($map, $key)};
+}
+
+// 设置 map 所有的值
+@mixin set-var-from-map-all($name, $map) {
+  @each $key, $value in $map {
+    @if $key == '' {
+      @include set-css-var($name, $value);
+    } @else {
+      @include set-var-from-map($name, $key, $map);
+    }
+  }
+}
+
+@mixin utils-clearfix {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::before,
+    #{$selector}::after {
+      display: table;
+      content: '';
+    }
+    #{$selector}::after {
+      clear: both;
+    }
+  }
+}
+
+@mixin utils-vertical-center {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::after {
+      display: inline-block;
+      content: '';
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+@mixin utils-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin utils-inline-flex-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

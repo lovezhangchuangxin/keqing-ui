@@ -1,0 +1,21 @@
+@use '../utils/function' as *;
+
+// --kq-button
+@debug joinVarName('button') == --kq-button;
+// --kq-button-icon
+@debug joinVarName('button', 'icon') == --kq-button-icon;
+
+// var(--kq-button-bg-color)
+@debug getCssVar('button', 'bg-color') == var(--kq-button-bg-color);
+
+// var(--kq-button-bg-color, red)
+@debug getCssVarWithDefault(('button', 'bg-color'), 'red') == var(--kq-button-bg-color, red);
+
+// kq-button
+@debug bem('button') == kq-button;
+// kq-button__icon
+@debug bem('button', 'icon') == kq-button__icon;
+// kq-button--primary
+@debug bem('button', '', 'primary') == kq-button--primary;
+// kq-button__icon--primary
+@debug bem('button', 'icon', 'primary') == kq-button__icon--primary;

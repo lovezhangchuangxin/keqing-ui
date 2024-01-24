@@ -6,6 +6,5 @@
   "peerDependencies": {
     "vue": "^3.3.11"
   },
-  "author": "lovezhangchuangxin",
   "license": "ISC"
 }

@@ -1,0 +1,45 @@
+// BEM 规范实现
+@use './config' as *;
+
+@mixin b($block) {
+  $B: $namespace + $common-separator + $block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $E: $B + $element-separator + $element !global;
+
+  @at-root {
+    .#{$E} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $M: $B + $modifier-separator + $modifier !global;
+
+  @at-root {
+    .#{$M} {
+      @content;
+    }
+  }
+}
+
+// bem 函数
+@function bem($block, $element: '', $modifier: '') {
+  $name: $namespace + $common-separator + $block;
+
+  @if $element != '' {
+    $name: $name + $element-separator + $element;
+  }
+
+  @if $modifier != '' {
+    $name: $name + $modifier-separator + $modifier;
+  }
+
+  @return $name;
+}

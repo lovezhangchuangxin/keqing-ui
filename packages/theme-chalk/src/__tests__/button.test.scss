@@ -1,0 +1,9 @@
+@forward '../components/button.scss' with (
+  $button: (
+    'font-weight': getCssVar('test-weight-primary'),
+  )
+);
+
+@use '../components/button.scss' as *;
+
+@debug $button;

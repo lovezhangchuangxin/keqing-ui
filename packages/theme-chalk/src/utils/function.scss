@@ -1,0 +1,21 @@
+// 一些函数实现
+@use './config' as *;
+
+// 拼接 css 变量名，带上前缀 --kq
+@function joinVarName($names...) {
+  $name: '--' + $namespace;
+  @each $n in $names {
+    $name: $name + '-' + $n;
+  }
+  @return $name;
+}
+
+// 获取 css 变量
+@function getCssVar($names...) {
+  @return var(#{joinVarName($names...)});
+}
+
+// 获取 css 变量，如果没有则返回默认值
+@function getCssVarWithDefault($names, $default) {
+  @return var(#{joinVarName($names...)}, #{$default});
+}

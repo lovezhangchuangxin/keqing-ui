@@ -1,0 +1,50 @@
+// 设置全局 css 变量
+
+@use './utils/mixins' as *;
+@use './utils/var' as *;
+
+:root {
+  @include set-var-from-map-all('color', $colors);
+  // 文本
+  @include set-var-from-map-all('text-color', $text-color);
+  // 边框
+  @include set-var-from-map-all('border-color', $border-color);
+  @include set-var-from-map-all('border-radius', $border-radius);
+  @include set-css-var-quick(
+    (
+      'border-width': $border-width,
+      'border-style': $border-style,
+      'border-color-hover': $border-color-hover,
+    )
+  );
+  @include set-css-var('border', getCssVar('border-width') getCssVar('border-style') getCssVar('border-color'));
+  // 填充
+  @include set-var-from-map-all('fill-color', $fill-color);
+  // 背景
+  @include set-var-from-map-all('bg-color', $bg-color);
+  // 文字
+  @include set-var-from-map-all('font-family', $font-family);
+  @include set-var-from-map-all('font-size', $font-size);
+  @include set-css-var-quick(
+    (
+      'font-weight': $font-weight,
+      'font-line-height': $font-line-height,
+    )
+  );
+  // 盒子阴影
+  @include set-var-from-map-all('box-shadow', $box-shadow);
+  // z-index
+  @include set-var-from-map-all('z-index', $z-index);
+  // disable
+  @include set-var-from-map-all('disabled', $disabled);
+  // common-component-size
+  @include set-var-from-map-all('common-component-size', $common-component-size);
+  // overlay-color
+  @include set-var-from-map-all('overlay-color', $overlay-color);
+  // mask-color
+  @include set-var-from-map-all('mask-color', $mask-color);
+  // transition
+  @include set-var-from-map-all('transition-duration', $transition-duration);
+  @include set-var-from-map-all('transition-function', $transition-function);
+  @include set-var-from-map-all('transition', $transition);
+}
