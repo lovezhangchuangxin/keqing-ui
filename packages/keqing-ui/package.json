@@ -69,6 +69,10 @@
     "svg",
     "keqing-ui"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lovezhangchuangxin/keqing-ui.git"
+  },
   "author": {
     "name": "lovezhangchuangxin",
     "email": "2911331070@qq.com"
