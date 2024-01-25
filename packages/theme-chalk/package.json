@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "keqing-ui": "workspace:^"
+  }
 }

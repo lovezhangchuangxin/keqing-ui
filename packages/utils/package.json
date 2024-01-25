@@ -4,5 +4,8 @@
   "description": "keqing-ui utils",
   "main": "index.ts",
   "author": "lovezhangchuangxin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "keqing-ui": "workspace:^"
+  }
 }

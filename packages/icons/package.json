@@ -37,5 +37,8 @@
     "vite": "^5.0.8",
     "vite-plugin-dts": "^3.7.1",
     "vue": "^3.3.11"
+  },
+  "dependencies": {
+    "keqing-ui": "workspace:^"
   }
 }

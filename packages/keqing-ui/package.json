@@ -80,5 +80,8 @@
   "license": "ISC",
   "peerDependencies": {
     "vue": "^3.3.11"
+  },
+  "dependencies": {
+    "keqing-ui": "workspace:^"
   }
 }

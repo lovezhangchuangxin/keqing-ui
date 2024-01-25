@@ -20,5 +20,8 @@
   },
   "peerDependencies": {
     "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "keqing-ui": "workspace:^"
   }
 }
