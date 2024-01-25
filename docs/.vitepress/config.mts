@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: 'keqing-ui',
+  base: '/keqing-ui/',
   title: 'Keqing UI',
   description: 'A Vue 3 Component Library',
   head: [['link', { rel: 'icon', href: './images/aqing.ico' }]],
