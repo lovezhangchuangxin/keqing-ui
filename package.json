@@ -15,10 +15,13 @@
     "lint": "eslint --fix . --cache",
     "lint:staged": "lint-staged",
     "play": "pnpm -C play dev",
-    "build": "pnpm run --filter keqing-ui build",
-    "docs:dev": "pnpm run -C docs dev",
-    "docs:build": "pnpm run -C docs build",
-    "docs:preview": "pnpm run -C docs preview"
+    "build": "pnpm build:icons && pnpm build:ui",
+    "build:ui": "pnpm --filter keqing-ui build",
+    "build:icons": "pnpm --filter icons build",
+    "build:play": "pnpm --filter play build",
+    "docs:dev": "pnpm -C docs dev",
+    "docs:build": "pnpm -C docs build",
+    "docs:preview": "pnpm -C docs preview"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.0.3",
